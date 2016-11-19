@@ -11,9 +11,9 @@ import java.util.Calendar;
 
 public class Database {
 
-    private static ArrayList<Goal> Goals;
+    private ArrayList<Goal> Goals;
 
-    public static void setupData() {
+    public void setupData() {
 
         Goals = new ArrayList<Goal>();
         Goal goal1 = new Goal("Walk out my front door", "Grow", "2016:1:12", 1, true, new ArrayList<String>());
@@ -82,44 +82,42 @@ public class Database {
     }
 
     public ArrayList<Goal> getBrosGoals() {
-        {
-            ArrayList<Goal> broGoals = new ArrayList<Goal>();
 
-            for (int i = 0; i < Goals.size(); i++) {
-                if (Goals.get(i).getGoalType() == "Bros") {
-                    broGoals.add(Goals.get(i));
-                }
+        ArrayList<Goal> broGoals = new ArrayList<Goal>();
+
+        for (int i = 0; i < Goals.size(); i++) {
+            if (Goals.get(i).getGoalType() == "Bros") {
+                broGoals.add(Goals.get(i));
             }
-            return broGoals;
         }
+        return broGoals;
+
 
     }
 
     public ArrayList<Goal> getGrowGoals() {
-        {
-            ArrayList<Goal> broGoals = new ArrayList<Goal>();
 
-            for (int i = 0; i < Goals.size(); i++) {
-                if (Goals.get(i).getGoalType() == "Grow") {
-                    broGoals.add(Goals.get(i));
-                }
+        ArrayList<Goal> broGoals = new ArrayList<Goal>();
+
+        for (int i = 0; i < Goals.size(); i++) {
+            if (Goals.get(i).getGoalType() == "Grow") {
+                broGoals.add(Goals.get(i));
             }
-            return broGoals;
         }
+        return broGoals;
+
     }
 
     public ArrayList<Goal> getMoveGoals() {
-        {
-            ArrayList<Goal> broGoals = new ArrayList<Goal>();
 
-            for (int i = 0; i < Goals.size(); i++) {
-                if (Goals.get(i).getGoalType() == "Move") {
-                    broGoals.add(Goals.get(i));
-                }
+        ArrayList<Goal> broGoals = new ArrayList<Goal>();
+
+        for (int i = 0; i < Goals.size(); i++) {
+            if (Goals.get(i).getGoalType() == "Move") {
+                broGoals.add(Goals.get(i));
             }
-            return broGoals;
         }
+        return broGoals;
+
     }
-
-
 }
