@@ -76,13 +76,9 @@ public class Database {
         Goals.add(goal15);
     }
 
-    public static  void AddGoal(Goal goal)
+    public void AddGoal(Goal goal)
     {
         Goals.add(goal);
-    }
-    public static  void RemoveGoal(Goal goal)
-    {
-        Goals.remove(goal);
     }
 
     public ArrayList<Goal> getAllGoals()
