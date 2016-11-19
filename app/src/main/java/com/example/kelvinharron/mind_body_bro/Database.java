@@ -80,6 +80,10 @@ public class Database {
     {
         Goals.add(goal);
     }
+    public static  void RemoveGoal(Goal goal)
+    {
+        Goals.remove(goal);
+    }
 
     public ArrayList<Goal> getAllGoals()
     {
@@ -146,4 +150,6 @@ public class Database {
             return broGoals;
         }
     }
+
+
 }
