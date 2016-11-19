@@ -2,10 +2,12 @@ package com.example.kelvinharron.mind_body_bro;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +24,14 @@ public class MoveFragment extends Fragment {
     private AdapterMoveGoal adapter;
     private View layout;
     private Context context;
+    private Database db;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = getActivity();
+        db = new Database();
+        db.setupData();
     }
 
     @Override
@@ -44,6 +49,7 @@ public class MoveFragment extends Fragment {
     }
 
     public List<Goal> getData() {
-        return new Database().getAllGoals();
+        return db.getAllGoals();
+
     }
 }

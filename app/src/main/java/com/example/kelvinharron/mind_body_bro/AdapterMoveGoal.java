@@ -37,19 +37,21 @@ public class AdapterMoveGoal extends RecyclerView.Adapter<AdapterMoveGoal.GoalVi
     public void onBindViewHolder(GoalViewHolder holder, final int posistion) {
         goal = moveGoalData.get(posistion);
 
+        holder.goalName.setText(goal.getGoalName());
+        holder.goalDateCreated.setText(goal.getGoalCreatedDate());
+//        holder.goalPriority.setText(goal.getGoalPriority());
 
     }
 
     @Override
     public int getItemCount() {
-        //moveGoalData.size()
-        return 0;
+
+        return moveGoalData.size();
     }
 
     public void deleteGoal(int position) {
         goal = moveGoalData.get(position);
-        Database db = new Database();
-        // DELETE GOAL
+        // TODO delete stub
         moveGoalData.remove(position);
         notifyItemRemoved(position);
         Toast.makeText(inflater.getContext(), "You did it!\nGoal Completed!!", Toast.LENGTH_LONG).show();

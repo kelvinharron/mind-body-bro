@@ -11,7 +11,7 @@ public class Goal {
 
     private static String goalName;
     private static String goalType;
-    private static Calendar createdDate;
+    private static String createdDate;
     private static int goalPriority;
     private static boolean isCompleted;
     ArrayList<String> brosOnGoal;
@@ -19,7 +19,7 @@ public class Goal {
     public Goal() {
     }
 
-    public Goal(String name, String type, Calendar created, int priority, boolean completed, ArrayList<String> bros) {
+    public Goal(String name, String type, String created, int priority, boolean completed, ArrayList<String> bros) {
         goalName = name;
         goalType = type;
         createdDate = created;
@@ -45,11 +45,11 @@ public class Goal {
         return goalType;
     }
 
-    public void setGoalCreatedDate(Calendar created) {
+    public void setGoalCreatedDate(String created) {
         createdDate = created;
     }
 
-    public Calendar getGoalCreatedDate() {
+    public String getGoalCreatedDate() {
         return createdDate;
     }
 

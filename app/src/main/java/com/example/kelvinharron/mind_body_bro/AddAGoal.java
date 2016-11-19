@@ -36,8 +36,6 @@ public class AddAGoal extends AppCompatActivity {
         addAGoalEditText.setText(goalText, EditText.BufferType.EDITABLE);
         submitGoalButton = (FloatingActionButton) findViewById(R.id.floating_action_button);
 
-
-
         dropdown = (Spinner) findViewById(R.id.typeSpinner);
         String[] items = new String[]{"Move", "Grow", "Bro", "Bros"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
