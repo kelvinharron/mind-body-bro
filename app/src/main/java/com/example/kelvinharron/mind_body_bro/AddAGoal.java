@@ -30,7 +30,6 @@ public class AddAGoal extends AppCompatActivity {
         setContentView(R.layout.activity_add_agoal);
         Intent fromWelcome = getIntent();
         goalText = fromWelcome.getStringExtra("GoalText");
-        Log.d("e", goalText);
 
         radioGroup = (RadioGroup) findViewById(R.id.priorityRadioGroup);
         addAGoalEditText = (EditText) findViewById(R.id.addAGoalEditText);
