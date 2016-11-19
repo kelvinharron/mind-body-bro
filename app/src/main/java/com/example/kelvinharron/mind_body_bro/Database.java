@@ -76,7 +76,7 @@ public class Database {
         Goals.add(goal15);
     }
 
-    public static  void AddGoal(Goal goal)
+    public void AddGoal(Goal goal)
     {
         Goals.add(goal);
     }
@@ -146,4 +146,6 @@ public class Database {
             return broGoals;
         }
     }
+
+
 }
