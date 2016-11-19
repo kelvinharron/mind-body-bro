@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Main user interface for our application. The views are used together with fragments that are inflated as the content views.
+ The Toolbar, tabs and floating action button will be constant between the two fragments that we use as we want the functionality
+ to remain the same across both of these screens. -->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- The viewpager is used so we can hold many fragments and swipe between them. -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!-- The AppBarLayout is a container for the toolbar to fit correctly in our CoordinatorLayout.
+     -->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- The toolbar is used to display the name of the app at all times as well as provide
+         access to the overflow menu where the settings and about options are easily accessed.
+         This allows us to reduce the visuals on screen while maintaining an easy route means for
+         the user to access settings. -->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/MyMaterialTheme.PopupOverlay"
+            android:background="?attr/colorPrimary" />
+
+        <!-- The tab layout works with the view pager, keeping a note of what tab we are on and
+         communicating with the view pager to display the correct content. -->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/themeAccent"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextColor="@color/textWhite"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- As many fragments can be displayed, our floating action button to add new alarms will be
+     visibile on each meaning users have quick access to setting a new alarm regardless if they are
+     reviewing current alarms or reading on the getting started page.-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/add_white_24dp"
+        android:layout_margin="16dp"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</android.support.design.widget.CoordinatorLayout>

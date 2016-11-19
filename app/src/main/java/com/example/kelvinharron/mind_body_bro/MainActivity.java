@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
                 if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN) &&
                         (i == KeyEvent.KEYCODE_ENTER)) {
-                    
+
                     Toast.makeText(MainActivity.this, goalEditText.getText(), Toast.LENGTH_SHORT).show();
                     // HERE WE GET THE TEXT VALUE, NEED TO USE INTENT TO PASS TO ADD NEW GOAL ACTIVITY
-                    // Intent addNewGoalIntent = new Intent(MainActivity.this, AddNewGoalActivity.class);
-                    //addNewGoalIntent.putExtra("TextBox", goalEditText.getText().toString());
-                    //startActivity(addNewGoalIntent);
+                    Intent addNewGoalIntent = new Intent(MainActivity.this, AllGoalsActivity.class);
+                    addNewGoalIntent.putExtra("TextBox", goalEditText.getText().toString());
+                    startActivity(addNewGoalIntent);
                     return true;
                 }
                 return false;
