@@ -50,6 +50,5 @@ public class MoveFragment extends Fragment {
 
     public List<Goal> getData() {
         return db.getAllGoals();
-
     }
 }
