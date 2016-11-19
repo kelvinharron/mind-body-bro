@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, goalEditText.getText(), Toast.LENGTH_SHORT).show();
                     // HERE WE GET THE TEXT VALUE, NEED TO USE INTENT TO PASS TO ADD NEW GOAL ACTIVITY
-                    Intent addNewGoalIntent = new Intent(MainActivity.this, AllGoalsActivity.class);
-                    addNewGoalIntent.putExtra("TextBox", goalEditText.getText().toString());
+                    Intent addNewGoalIntent = new Intent(MainActivity.this, AddAGoal.class);
+                    addNewGoalIntent.putExtra("GoalText", goalEditText.getText().toString());
+
                     startActivity(addNewGoalIntent);
                     return true;
                 }

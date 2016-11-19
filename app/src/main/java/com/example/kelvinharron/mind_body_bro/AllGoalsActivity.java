@@ -52,7 +52,8 @@ public class AllGoalsActivity extends AppCompatActivity {
         addAlarmFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // intent for adding new goal
+                Intent addNewGoal = new Intent(AllGoalsActivity.this, AddAGoal.class);
+                startActivity(addNewGoal);
             }
         });
     }
