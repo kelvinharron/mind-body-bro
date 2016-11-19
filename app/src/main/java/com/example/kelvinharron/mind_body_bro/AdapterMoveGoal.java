@@ -39,13 +39,12 @@ public class AdapterMoveGoal extends RecyclerView.Adapter<AdapterMoveGoal.GoalVi
 
         holder.goalName.setText(goal.getGoalName());
         holder.goalDateCreated.setText(goal.getGoalCreatedDate());
-//        holder.goalPriority.setText(goal.getGoalPriority());
+        holder.goalPriority.setText(String.valueOf(goal.getGoalPriority()));
 
     }
 
     @Override
     public int getItemCount() {
-
         return moveGoalData.size();
     }
 

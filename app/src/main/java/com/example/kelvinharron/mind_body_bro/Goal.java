@@ -59,7 +59,6 @@ public class Goal {
         } else if (priority > 3) {
             priority = 3;
         }
-
         goalPriority = priority;
     }
 

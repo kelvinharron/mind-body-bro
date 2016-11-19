@@ -12,19 +12,6 @@
     android:orientation="vertical">
 
 
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:text="Welcome!"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_orange_dark"
-        android:layout_marginBottom="97dp"
-        android:layout_above="@+id/goalEditText"
-        android:layout_centerHorizontal="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +21,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:hint="I want to..."
-        android:textColor="?attr/colorPrimary" />
+        android:textColor="@color/themeBlue" />
 
     <TextView
 
@@ -43,7 +30,7 @@
         android:textSize="36sp"
         android:textStyle="bold"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/themeBlue"
         android:layout_above="@+id/goalEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp" />
